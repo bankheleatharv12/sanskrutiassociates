@@ -411,23 +411,13 @@ export function ContactUs() {
           background: #dc2626;
         }
 
-        /* Gentle Float Animation */
+        /* Gentle Float Animation - DISABLED to prevent unwanted movement */
         @keyframes gentleFloat {
           0%, 100% { transform: translateY(0px); }
           50% { transform: translateY(-5px); }
         }
 
-        .contact-method-card {
-          animation: gentleFloat 4s ease-in-out infinite;
-        }
-
-        .contact-method-card:nth-child(1) { animation-delay: 0s; }
-        .contact-method-card:nth-child(2) { animation-delay: 1.3s; }
-        .contact-method-card:nth-child(3) { animation-delay: 2.6s; }
-
-        .contact-method-card:hover {
-          animation-play-state: paused;
-        }
+        /* Float animation removed from contact cards */
 
         /* Button spinner */
         @keyframes spin {
@@ -912,8 +902,6 @@ function BusinessHoursCard() {
         maxWidth: '600px',
         margin: '1.5rem auto 3rem',
         padding: '1.75rem 2rem',
-        animation: 'gentleFloat 4s ease-in-out infinite',
-        animationDelay: '0.5s',
       }}
     >
       {/* Header Row */}

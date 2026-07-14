@@ -488,13 +488,13 @@ export function WhyChooseUs() {
 
         .premium-card:hover {
           transform: translateY(-12px) scale(1.03);
-          background: rgba(255, 255, 255, 0.12) !important;
-          border-color: rgba(34, 197, 94, 0.7) !important;
-          box-shadow: 0 0 0 1.5px rgba(34, 197, 94, 0.7), 0 20px 40px rgba(0, 0, 0, 0.4) !important;
+          background: rgba(255, 255, 255, 1) !important;
+          border-color: rgba(34, 197, 94, 0.8) !important;
+          box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.5), 0 20px 40px rgba(0, 0, 0, 0.4) !important;
         }
 
         .premium-card:hover .card-title {
-          color: #86efac;
+          color: #16A34A;
           letter-spacing: 0.5px;
         }
 
@@ -563,7 +563,7 @@ export function WhyChooseUs() {
       {/* Background Image with Parallax */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/src/imports/ChatGPT_Image_May_4,_2026,_03_14_06_PM.png"
+          src="/why-choose-bg.png"
           alt="Modern corporate office background"
           className="w-full h-full object-cover object-center"
           style={{
@@ -571,18 +571,8 @@ export function WhyChooseUs() {
             transition: 'transform 0.1s ease-out',
           }}
         />
-        {/* Breathing gradient overlay */}
-        <div className="breathing-overlay absolute inset-0"></div>
-
-        {/* Floating orbs */}
-        <div className="orb orb-1"></div>
-        <div className="orb orb-2"></div>
-        <div className="orb orb-3"></div>
-        <div className="orb orb-4"></div>
-        <div className="orb orb-5"></div>
-
-        {/* Diagonal light sweep */}
-        <div className="diagonal-sweep"></div>
+        {/* Dark overlay for better contrast - no breathing effect */}
+        <div className="absolute inset-0" style={{ background: 'rgba(10, 15, 40, 0.85)' }}></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -630,34 +620,33 @@ export function WhyChooseUs() {
               <div
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
-                className={`premium-card text-center group p-6 rounded-2xl ${floatClass} ${glowClass} ${
+                className={`premium-card text-center group p-6 rounded-2xl ${
                   cardsInView ? 'card-entrance' : 'opacity-0'
                 }`}
                 style={{
-                  background: 'rgba(255, 255, 255, 0.08)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  backdropFilter: 'blur(10px)',
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  border: '2px solid rgba(34, 197, 94, 0.3)',
+                  boxShadow: '0 4px 16px rgba(0, 0, 0, 0.3)',
                   animationDelay: cardsInView ? `${index * 0.15}s` : '0s',
                   position: 'relative',
                 }}
                 onMouseMove={(e) => handleMouseMove(e, index)}
               >
-                {/* Icon box with all effects */}
+                {/* Icon box - simplified */}
                 <div
-                  className={`icon-box icon-ring relative inline-flex items-center justify-center w-20 h-20 bg-[#16A34A]/20 rounded-2xl mb-4 border border-[#16A34A]/30 icon-pulse ${
+                  className={`icon-box relative inline-flex items-center justify-center w-20 h-20 bg-[#16A34A]/20 rounded-2xl mb-4 border-2 border-[#16A34A]/40 shadow-md ${
                     cardsInView ? 'icon-pop' : ''
                   }`}
                   style={{
                     animationDelay: cardsInView ? `${index * 0.15 + 0.2}s` : '0s',
                   }}
                 >
-                  <Icon className="w-10 h-10 text-[#16A34A] icon-rotate" />
+                  <Icon className="w-10 h-10 text-[#16A34A]" />
                 </div>
 
-                <h3 className="card-title text-lg text-white mb-2">{benefit.title}</h3>
+                <h3 className="card-title text-lg text-gray-900 font-semibold mb-2">{benefit.title}</h3>
                 <p
-                  className="card-description text-sm leading-relaxed"
-                  style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                  className="card-description text-sm leading-relaxed text-gray-700"
                 >
                   {benefit.description}
                 </p>

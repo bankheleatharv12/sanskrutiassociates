@@ -631,28 +631,8 @@ export function Testimonials() {
         }
       `}</style>
 
-      {/* Breathing gradient background */}
-      <div className="breathing-bg absolute inset-0"></div>
-
-      {/* Floating orbs */}
-      <div className="bg-orb bg-orb-1"></div>
-      <div className="bg-orb bg-orb-2"></div>
-      <div className="bg-orb bg-orb-3"></div>
-      <div className="bg-orb bg-orb-4"></div>
-
-      {/* Sparkle dots */}
-      {[...Array(15)].map((_, i) => (
-        <div
-          key={i}
-          className="sparkle-dot"
-          style={{
-            top: `${Math.random() * 100}%`,
-            left: `${Math.random() * 100}%`,
-            animation: `sparklePulse ${2 + Math.random() * 3}s ease-in-out infinite`,
-            animationDelay: `${Math.random() * 5}s`,
-          }}
-        />
-      ))}
+      {/* Clean simple background - no effects */}
+      <div className="absolute inset-0" style={{ background: '#f8fafc' }}></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Title Section */}
@@ -710,20 +690,16 @@ export function Testimonials() {
                 key={index}
                 ref={(el) => (cardRefs.current[index] = el)}
                 className={`
-                  bg-white rounded-2xl p-8 border-2 relative overflow-hidden
-                  transition-all duration-400 cursor-pointer
+                  bg-white rounded-2xl p-8 border-2 border-gray-200 relative overflow-hidden
+                  transition-all duration-400 cursor-pointer shadow-md
                   ${cardsInView ? 'card-entrance' : ''}
-                  ${cardsInView ? `card-float-${index + 1}` : ''}
-                  ${cardsInView ? `border-glow-${index + 1}` : ''}
-                  hover:scale-103 hover:-translate-y-3.5 hover:bg-[#fffdf5]
+                  hover:scale-103 hover:-translate-y-3.5 hover:shadow-xl hover:border-[#fbbf24]
                 `}
                 style={{
                   animationDelay: cardsInView ? `${index * 200}ms` : '0s',
                   transitionTimingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
                   willChange: 'transform',
                 }}
-                onMouseMove={(e) => handleMouseMove(e, index)}
-                onMouseLeave={handleMouseLeave}
               >
                 {/* Mouse spotlight */}
                 {mousePosition.cardIndex === index && (
@@ -735,20 +711,18 @@ export function Testimonials() {
                   />
                 )}
 
-                {/* Quote mark */}
-                <div className={`absolute top-6 right-6 text-[#fbbf24] ${cardsInView ? 'quote-breathe' : ''}`}>
+                {/* Quote mark - simplified */}
+                <div className={`absolute top-6 right-6 text-[#fbbf24] opacity-20`}>
                   <Quote className="w-12 h-12" />
                 </div>
 
-                {/* Stars */}
+                {/* Stars - simplified, no glow effects */}
                 <div className="flex gap-1 mb-4 relative z-10">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star
                       key={i}
                       className={`w-5 h-5 fill-[#fbbf24] text-[#fbbf24] 
                         ${starsAnimating ? 'star-fill' : ''}
-                        ${cardsInView ? `star-glow-${i + 1}` : ''}
-                        ${cardsInView ? `star-shimmer-${i + 1}` : ''}
                       `}
                       style={{
                         animationDelay: starsAnimating ? `${i * 140}ms` : '0s',
@@ -763,21 +737,12 @@ export function Testimonials() {
                   "{testimonial.text}"
                 </p>
 
-                {/* Avatar and name */}
+                {/* Avatar and name - simplified */}
                 <div className="flex items-center gap-4 relative z-10">
                   <div className="relative">
-                    {/* Rotating ring */}
-                    <div className="absolute inset-0 rounded-full avatar-ring opacity-40">
-                      <div
-                        className="w-full h-full rounded-full"
-                        style={{
-                          background: 'conic-gradient(from 0deg, #2563EB, #1E40AF, #2563EB)',
-                        }}
-                      />
-                    </div>
-                    {/* Avatar circle */}
+                    {/* Avatar circle - no rotating ring */}
                     <div
-                      className={`relative w-12 h-12 bg-gradient-to-br from-[#2563EB] to-[#1E40AF] rounded-full flex items-center justify-center text-white text-lg ${
+                      className={`relative w-12 h-12 bg-gradient-to-br from-[#2563EB] to-[#1E40AF] rounded-full flex items-center justify-center text-white text-lg shadow-md ${
                         cardsInView ? 'avatar-pop' : ''
                       }`}
                       style={{
@@ -798,11 +763,6 @@ export function Testimonials() {
                     </div>
                     <div className="text-sm text-gray-500">{testimonial.role}</div>
                   </div>
-                </div>
-
-                {/* Progress line on hover */}
-                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gray-100 overflow-hidden">
-                  <div className="h-full bg-gradient-to-r from-[#fbbf24] to-[#f59e0b] w-0 hover:progress-fill"></div>
                 </div>
               </div>
             ))}
