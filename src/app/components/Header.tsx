@@ -71,7 +71,7 @@ export function Header() {
           >
             <div className="relative">
               <img
-                src="/src/imports/ChatGPT_Image_May_3,_2026,_08_05_15_PM.png"
+                src="/sanskruti-logo.png"
                 alt="Sanskruti Associates Logo"
                 className="h-12 w-auto"
                 style={{ 

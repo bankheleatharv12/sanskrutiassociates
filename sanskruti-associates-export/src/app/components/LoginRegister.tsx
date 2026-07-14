@@ -45,7 +45,7 @@ export function LoginRegister() {
           {/* Logo */}
           <div className="text-center mb-6">
             <img
-              src="/src/imports/ChatGPT_Image_May_3,_2026,_08_05_15_PM.png"
+              src="/sanskruti-logo.png"
               alt="Sanskruti Associates Logo"
               className="h-16 w-auto mx-auto mb-4"
             />

@@ -52,7 +52,7 @@ export function AdminDashboard() {
         <div className="p-6 border-b border-white/10">
           <div className="flex items-center gap-3">
             <img
-              src="/src/imports/ChatGPT_Image_May_3,_2026,_08_05_15_PM.png"
+              src="/sanskruti-logo.png"
               alt="Logo"
               className="h-10 w-auto"
               style={{ mixBlendMode: 'lighten' }}
