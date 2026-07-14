@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskruti Associates - Always With You | Best Loan Deals</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #0d1b3e;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar-brand-icon {
+            width: 40px;
+            height: 40px;
+            background: #2251CC;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .navbar-brand-text h1 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .navbar-brand-text p {
+            font-size: 0.75rem;
+            color: #94a3b8;
+        }
+
+        .navbar-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .navbar-links a:hover {
+            color: #22C55E;
+        }
+
+        .navbar-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 0.625rem 1.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: #0d1b3e;
+        }
+
+        .btn-primary {
+            background: #22C55E;
+            color: white;
+            border: 1.5px solid #22C55E;
+        }
+
+        .btn-primary:hover {
+            background: #16a34a;
+            border-color: #16a34a;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(13, 27, 62, 0.85), rgba(13, 27, 62, 0.85)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%230d1b3e" width="1200" height="800"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .trust-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #22C55E;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.125rem;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-large {
+            padding: 0.875rem 2rem;
+            font-size: 1rem;
+        }
+
+        .btn-outline-white {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline-white:hover {
+            background: white;
+            color: #0d1b3e;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #22C55E;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-item p {
+            font-size: 0.875rem;
+            color: #94a3b8;
+        }
+
+        /* Loan Services Section */
+        .loan-services {
+            background: #EEF2F8;
+            padding: 5rem 2rem;
+        }
+
+        .loan-services-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #0d1b3e;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-header p {
+            font-size: 1.125rem;
+            color: #64748b;
+        }
+
+        .loan-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .loan-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s;
+        }
+
+        .loan-card:hover {
+            box-shadow: 0 12px 24px rgba(34, 81, 204, 0.15);
+            transform: translateY(-4px);
+        }
+
+        .loan-card-icon {
+            width: 56px;
+            height: 56px;
+            background: #e0e7ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2251CC;
+            margin-bottom: 1.25rem;
+        }
+
+        .loan-card h3 {
+            font-size: 1.375rem;
+            font-weight: 700;
+            color: #0d1b3e;
+            margin-bottom: 0.75rem;
+        }
+
+        .loan-card p {
+            color: #64748b;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .loan-card-actions {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .view-more-link {
+            color: #2251CC;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+
+        .view-more-link:hover {
+            gap: 0.75rem;
+        }
+
+        .btn-outline-blue {
+            background: transparent;
+            border: 1.5px solid #2251CC;
+            color: #2251CC;
+            padding: 0.5rem 1.25rem;
+            font-size: 0.875rem;
+        }
+
+        .btn-outline-blue:hover {
+            background: #2251CC;
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .navbar-links {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .loan-cards-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .navbar {
+                padding: 1rem;
+            }
+
+            .navbar-actions {
+                gap: 0.5rem;
+            }
+
+            .btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.8rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .loan-cards-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="navbar-brand">
+                <div class="navbar-brand-icon">SA</div>
+                <div class="navbar-brand-text">
+                    <h1>Sanskruti Associates</h1>
+                    <p>Always With You</p>
+                </div>
+            </a>
+
+            <ul class="navbar-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#loan-services">Loan Services</a></li>
+                <li><a href="#">EMI Calculator</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+            <div class="navbar-actions">
+                <a href="#" class="btn btn-outline">Login / Register</a>
+                <a href="#" class="btn btn-primary">Apply Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="trust-badge">
+                    <i data-lucide="shield-check" style="width: 18px; height: 18px;"></i>
+                    Trusted by 10,000+ customers
+                </div>
+
+                <h1>Get the Best Loan Deals from Multiple Banks</h1>
+
+                <p>
+                    Fast approval, competitive rates, and personalized loan solutions tailored to your needs. 
+                    Compare offers from 200+ banks and NBFCs in minutes.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-large">Apply Now</a>
+                    <a href="#" class="btn btn-outline-white btn-large">Check EMI</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>10,000+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>₹500 Cr+</h3>
+                        <p>Loans Disbursed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>200+</h3>
+                        <p>Bank & NBFC Partners</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loan Services Section -->
+    <section id="loan-services" class="loan-services">
+        <div class="loan-services-container">
+            <div class="section-header">
+                <h2>Loan Solutions for Every Need</h2>
+                <p>Choose from our wide range of loan products designed to meet your financial goals</p>
+            </div>
+
+            <div class="loan-cards-grid">
+                <!-- Home Loan -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="home" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Home Loan</h3>
+                    <p>Attractive interest rates starting from 8.5% with flexible tenure options</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Loan Against Property -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="building-2" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Loan Against Property</h3>
+                    <p>Up to ₹10 Crore at 9% p.a. with minimal documentation</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Personal Loan -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="briefcase" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Personal Loan</h3>
+                    <p>Quick funds with no collateral required, instant approval</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Business Loan -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="briefcase-business" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Business Loan</h3>
+                    <p>Flexible repayment options with quick approval for your business needs</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Education Loan -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="graduation-cap" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Education Loan</h3>
+                    <p>Study in India or abroad with rates starting from 8.4% p.a.</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Hospital Finance -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="hospital" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Hospital Finance</h3>
+                    <p>Financing for expansion, equipment purchases, and facility upgrades</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Car Loan -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="car" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Car Loan</h3>
+                    <p>For salaried and self-employed with fast approval process</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- CC / OD -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="credit-card" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>CC / OD</h3>
+                    <p>Cash credit and overdraft facilities for working capital needs</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Machinery Loan -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="settings" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Machinery Loan</h3>
+                    <p>Finance for new or used machinery with quick approval</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- Industry Finance -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="trending-up" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>Industry Finance</h3>
+                    <p>Smart financing solutions tailored for MSMEs and industries</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+
+                <!-- School Finance -->
+                <div class="loan-card">
+                    <div class="loan-card-icon">
+                        <i data-lucide="book-open" style="width: 28px; height: 28px;"></i>
+                    </div>
+                    <h3>School Finance</h3>
+                    <p>Cover fees, hostel, and transport expenses from 6.85% p.a.</p>
+                    <div class="loan-card-actions">
+                        <a href="#" class="view-more-link">
+                            View More
+                            <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline-blue">Apply Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initialize Lucide Icons -->
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

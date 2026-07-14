@@ -1,0 +1,11 @@
+[33m5b4fdf7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: Initial project upload
+[33m2f32fb9[m HEAD@{1}: reset: moving to HEAD
+[33m2f32fb9[m HEAD@{2}: Branch: renamed refs/heads/main to refs/heads/main
+[33m2f32fb9[m HEAD@{4}: Branch: renamed refs/heads/atharv-feature to refs/heads/main
+[33m2f32fb9[m HEAD@{6}: commit: added features
+[33m1391372[m HEAD@{7}: commit: added features
+[33m4d7ccbe[m HEAD@{8}: commit: added features
+[33m8979272[m HEAD@{9}: commit: added features
+[33mb9134ce[m HEAD@{10}: checkout: moving from main to atharv-feature
+[33mb9134ce[m HEAD@{11}: commit: Added changes
+[33m629dea0[m HEAD@{12}: clone: from https://gitlab.com/bhosaleatharv8765-group/sanskruti_associates_fintech_solution.git
